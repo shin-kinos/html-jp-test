@@ -1,0 +1,12 @@
+{
+  "name": "html-jp-test",
+  "version": "0.1.0",
+  "files": [
+    "html_jp_test_bg.wasm",
+    "html_jp_test.js",
+    "html_jp_test.d.ts"
+  ],
+  "module": "html_jp_test.js",
+  "types": "html_jp_test.d.ts",
+  "sideEffects": false
+}

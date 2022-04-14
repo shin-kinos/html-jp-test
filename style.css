@@ -1,0 +1,101 @@
+
+.style_test0 {
+	font-size        : 40px;
+	font-family      : sans-serif;
+	color            : #000000;
+	background-color : #FFBD35;
+	font-weight      : 700;
+	/* Let it move to the centre */
+	text-align       : center;
+}
+
+.style_subtitle {
+	font-size        : 15px;
+	font-family      : 'Menlo', 'Lucida Console', 'Monaco', 'Consolas', monospace;
+	color            : #000000;
+	background-color : #F55353;
+	text-align       : center;
+	font-weight      : 400;
+}
+
+.style_test1 {
+	font-size        : 20px;
+	font-family      : sans-serif;
+	color            : #000000;
+	background-color : #DDDDDD;
+	font-weight      : 700;
+	width            : 100%;
+	margin           : 0 auto;
+	max-width        : 500px;
+	text-align       : center;
+}
+
+.style_test2 {
+	font-size        : 20px;
+	font-family      : sans-serif;
+	color            : #FFFFFF;
+	background-color : #143F6B;
+	font-weight      : 700;
+	/* Let it move to the centre */
+	width            : 100%;
+	margin           : 0 auto;
+	max-width        : 500px;
+	text-align       : center;
+}
+
+.style_test3 {
+	font-size        : 20px;
+	font-family      : "monospace";
+	color            : #30475E;
+	background-color : #32E0C4;
+	font-weight      : 700;
+	/* Let it move to the centre */
+	width            : 100%;
+	margin           : 0 auto;
+	max-width        : 500px;
+	text-align       : center;
+}
+
+.style_test4 {
+	font-size        : 40px;
+	font-family      : serif;
+	font-style       : italic;
+	color            : #000000;
+	font-weight      : 700;
+	/* Let it move to the centre */
+	text-align       : center;
+}
+
+.btn_design{
+	font-family      : sans-serif;
+	font-size        : 40px;
+	font-weight      : 700;
+	height           : 50px; /* 20px */
+	padding          : 10px 50px; /* 5px 5px */
+	background-color : #F900BF;
+	border           : 2px solid #F900BF;
+	display          : block;
+	text-decoration  : none;
+	border-radius    : 10px;
+	color            : #FFFFFF;
+	width            : 100%;
+	margin           : 0 auto;
+	max-width        : 150px;
+	text-align       : center;
+}
+.btn_design:hover {
+	box-shadow    : none;        /* カーソル時の影消去 */
+	color         : #F900BF;     /* 背景色     */
+	background    : #ffffff;     /* 文字色     */
+}
+
+pre {
+	margin                     : 1em 0;
+	font-family                : 'Menlo', 'Lucida Console', 'Monaco', 'Consolas', monospace;
+	padding                    : 1em;
+	border-radius              : 5px;
+	color                      : #444;
+	background-color           : #e7edf3;
+	overflow-x                 : auto;
+	-webkit-overflow-scrolling : touch;
+}

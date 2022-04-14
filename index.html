@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>こんにちは</title>
+</head>
+<body>
+
+	<div class = "style_test0"> ようこそ！！！</div>
+	
+	<div class = "style_subtitle" > Rust WebAssembly 日本語 表示 テスト by Shintaro.K </div>
+
+	<br>
+
+	<div class = "style_test1">
+		押すとアラートが出るボタン
+		<p>
+			<button type = "button" onclick = "onClickGreet()"> クリック ! </button>
+		</p>
+	</div>
+
+	<br>
+
+	<div class="style_test2">
+		たし算をするボタン
+		<p>
+			<input type="number" id="numAdd1" value="2"> + <input type="number" id="numAdd2" value="3">
+			<input type="button" value="計算 !" onclick="onClickAdd()">
+		</p>
+		<p id="outputAdd">計算結果！</p>
+	</div>
+
+	<br>
+
+	<div class="style_test3">
+		かけ算をするボタン
+		<p>
+			<input type="number" id="numMul1" value="24"> × <input type="number" id="numMul2" value="999">
+			<input type="button" value="計算 !" onclick="onClickMul()">
+		</p>
+		<p id="outputMul">計算結果！</p>
+	</div>
+
+	<br>
+
+	<div class = "style_test4">
+		👇👇👇おねショタ増し増しボタン👇👇👇
+	</div>
+
+	<a onclick = "onClickOmake()" class = "btn_design">PUSH</a>
+
+	<script type = "module">
+		import init, { show_alert, add, mul } from "./pkg/html_jp_test.js";
+
+		/* アラートを表示する. */
+		const onClickGreet = function () {
+			init().then( () => {
+				show_alert( "ハロー、WebAssembly！✋😁" )
+			} );
+		}
+		window.onClickGreet = onClickGreet;
+		export { onClickGreet };
+
+		/* たし算をする. */
+		const onClickAdd = function () {
+			init().then(() => {
+				var n1  = document.getElementById( "numAdd1" ).value;
+				var x1  = parseInt( n1 );
+				var n2  = document.getElementById( "numAdd2" ).value;
+				var x2  = parseInt( n2 );
+				var ans = add( x1, x2 );
+				document.getElementById( "outputAdd" ).innerHTML
+				= n1 + " + " + n2 + " = " + ans;
+			} );
+		}
+		window.onClickAdd = onClickAdd;
+		export { onClickAdd };
+
+		/* かけ算をする. */
+		const onClickMul = function () {
+			init().then(() => {
+				var n1  = document.getElementById( "numMul1" ).value;
+				var x1  = parseInt( n1 );
+				var n2  = document.getElementById( "numMul2" ).value;
+				var x2  = parseInt( n2 );
+				var ans = mul( x1, x2 );
+				document.getElementById( "outputMul" ).innerHTML
+				= n1 + " × " + n2 + " = " + ans;
+			} );
+		}
+		window.onClickMul = onClickMul;
+		export { onClickMul };
+
+		/* アラートを表示する(おまけ). */
+		const onClickOmake = function () {
+			init().then( () => {
+				show_alert( "ここまでわざわざ遊びに来てくれてありがとう！💚" )
+			} );
+		}
+		window.onClickOmake = onClickOmake;
+		export { onClickOmake };
+
+	</script>
+</body>
+</html>
